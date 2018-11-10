@@ -26,7 +26,7 @@ function is_dividable_with() {
   (
   declare -i remains="${1}"
   while [ "${remains}" -ge "${2}" ]; do
-    remains="$(("${remains}" - "${2}"))"
+    remains="$((remains - ${2}))"
   done
   if [ "${remains}" -gt 0 ]; then
     return "${FALSE}"
